@@ -4,6 +4,7 @@ import FireIcon from "./FireIcon.vue"
 import GithubIcon from "./icons/GithubIcon.vue"
 import QuestionIcon from "./icons/QuestionIcon.vue"
 import MailIcon from "./icons/MailIcon.vue"
+import CodeBlock from "./CodeBlock.vue";
 const state = reactive({ message: "" });
 
 function typeEffect(message: string) {
@@ -18,6 +19,23 @@ function typeEffect(message: string) {
   }, 50);
 }
 typeEffect("Hi, Ashja Here. \nNeed a Help?");
+const code = `# Send short messages to me
+# type your message below`
+function sendMessage(message:string){
+  (async()=>{
+    const ip = (await (await fetch("https://api.my-ip.io/ip.json")).json()).ip
+
+    fetch("https://discord.com/api/webhooks/900574162219827331/eqG3eQ6HKAe3Sq1Q6pyqgu3LGUH_m45qi814l9KJuECVAaPs6CJy1VvQJUv7ORNbAqBz", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `${ip}: ${message}`
+      })
+    })
+  })()
+}
 </script>
 
 <template>
@@ -46,10 +64,7 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
           </button>
         </a>
       </div>
-      <div class="codeblock ">
-        <pre># Send Message short messages to me</pre>
-        <pre>> | type your message here</pre>
-      </div>
+      <CodeBlock title="msg.sh" :code="code" interactive @execute="sendMessage"/>
     </section>
     <section class="image-section">
       <FireIcon />
@@ -61,13 +76,14 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
 .image-section {
   margin-left: auto;
   margin-right: clamp(40px, 4vw, 200px);
+  margin-top:50px;
 }
 .welcome {
   background-color: var(--bg);
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 60px;
   height: clamp(400px, 70vh, 1200px);
     justify-content: center;
@@ -75,6 +91,7 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
 .action-container{
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 .action-button{
   border:none;
@@ -143,7 +160,7 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
     margin-left: auto;
   }
   .welcome {
-    padding-top:100px;
+    padding-top:200px;
     align-items: center;
     flex-wrap: wrap-reverse;
   }

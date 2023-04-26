@@ -26,8 +26,3 @@ a{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-.codeblock{
-  background-color: var(--arctic-bg);
-  font-family: 'Roboto Mono', monospace;
-  color:var(--text);
-}
