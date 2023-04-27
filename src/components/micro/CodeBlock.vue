@@ -40,7 +40,6 @@ let codelines:Array<codeline> = reactive([])
 const codes = props.code.split("\n")
 codes.forEach(code=>{
     // Low effort color scheming LOL
-    console.log(code)
     if(code.startsWith("#")){
         code = `<span style="color:#ffffff99">${code}</span>`
         return codelines.push({

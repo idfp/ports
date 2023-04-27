@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import Avatar from './Avatar.vue';
-import CodeBlock from './CodeBlock.vue';
+import Avatar from './Avatar.vue'
+import CodeBlock from './micro/CodeBlock.vue'
+import GitProjects from './GitProjects.vue'
+
 const code = `> skill list
 Web Development:
   HTML - CSS - JS
@@ -31,6 +33,7 @@ Desktop Development:
                 <CodeBlock :code="code" :line="10" title="Skills.sh"/>
             </div>
         </div>
+        <GitProjects/>
     </section>
 </template>
 

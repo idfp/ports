@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300&family=Roboto&family=Roboto+Mono:wght@300;400&display=swap');
+:root{
+  --bg:#0c1313;
+  --text:#ffffff;
+  --arctic-prim:#9BA4B5;
+  --arctic-fg: #394867;
+  --arctic-bg: #212A3E;
+  --arctic-text: #F1F6F9;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.color-arctic-prim{color:var(--arctic-prim)}
+.bg-arctic-prim{background-color:var(--arctic-prim)}
+.color-arctic-bg{color:var(--arctic-bg)}
+.bg-arctic-bg{background-color:var(--arctic-bg)}
+.color-arctic-text{color:var(--arctic-text)}
+.bg-arctic-text{background-color:var(--arctic-text)}
+.color-arctic-fg{color:var(--arctic-fg)}
+.bg-arctic-fg{background-color:var(--arctic-fg)}
+
+
 body {
   display: flex;
   place-items: center;
   margin: 0;
+  background-color: var(--bg);
   padding: 0;
 }
 a{
@@ -16,13 +37,5 @@ a{
   background-color: #ffffffe3;
   color:#000;
 }
-:root{
-  --bg:#0c1313;
-  --text:#ffffff;
-  --arctic-prim:#9BA4B5;
-  --arctic-fg: #394867;
-  --arctic-bg: #212A3E;
-  --arctic-text: #F1F6F9;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+
+

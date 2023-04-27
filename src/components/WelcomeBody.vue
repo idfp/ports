@@ -4,7 +4,7 @@ import FireIcon from "./FireIcon.vue"
 import GithubIcon from "./icons/GithubIcon.vue"
 import QuestionIcon from "./icons/QuestionIcon.vue"
 import MailIcon from "./icons/MailIcon.vue"
-import CodeBlock from "./CodeBlock.vue";
+import CodeBlock from "./micro/CodeBlock.vue";
 const state = reactive({ message: "" });
 
 function typeEffect(message: string) {
