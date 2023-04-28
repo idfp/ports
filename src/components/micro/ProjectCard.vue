@@ -21,8 +21,8 @@ if(props.imageUrl?.indexOf("webm") && props.imageUrl?.indexOf("webm") > -1){
       <a target="_blank" :href="props.url" class="color-arctic-prim">Open In New Tab</a>
     </div>
     <div class="project-img-container">
-      <video v-if="isWebm" class="project-img" autoplay muted loop><source :src="props.imageUrl" type="video/webm"/></video>
-      <img v-else class="project-img" :src="imageUrl" />
+      <video :alt="props.description" v-if="isWebm" class="project-img" autoplay muted loop><source :src="props.imageUrl" type="video/webm"/></video>
+      <img :alt="props.description" v-else class="project-img" :src="imageUrl" />
     </div>
   </div>
 </template>
