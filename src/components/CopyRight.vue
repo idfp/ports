@@ -1,13 +1,13 @@
 <template>
   <footer class="copyright">
-    <h5>Copyright © 2023 Ashja R. Lesmana</h5>
+    <h1 class="copyright-text">Copyright © 2023 Ashja R. Lesmana</h1>
   </footer>
 </template>
 <style>
 footer {
   margin-top: 50px;
 }
-h5 {
+.copyright-text {
   font-family: "Roboto Mono", monospace;
   font-size: 15px;
   font-weight: 200;
