@@ -13,6 +13,8 @@ const props = defineProps({
             <span class="color-arctic-prim">Project-Name</span>: {{ props.name }} <br />
             <span class="color-arctic-prim">Topics</span>: {{ props.topics?.join(", ") }} <br />
             <span class="color-arctic-prim">Description</span>: {{ props.description }} <br />
+            <br />
+            <a target="_blank" :href="props.url" class="color-arctic-prim">Open In New Tab</a>
         </div>
         <div class="project-img-container">
             <img class="project-img" :src="imageUrl" />
@@ -28,7 +30,8 @@ const props = defineProps({
     font-size: 15px;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    max-width: 500px;
+    max-width: 550px;
+    max-height: 200px;
     justify-content: center;
     align-items: center;
     margin: 10px;
@@ -41,8 +44,8 @@ const props = defineProps({
 }
 
 .project-img {
-    max-width: 200px;
-    height: auto;
+    max-width: 220px;
+    height: 100%;
 }
 
 .project-img-container {
@@ -50,9 +53,11 @@ const props = defineProps({
 }
 
 @media screen and (max-width:768px) {
-    .project{
+    .project {
         border: 0.2px solid var(--arctic-prim);
+        max-height: none;
     }
+
     .project-properties {
         max-width: 100%;
     }
@@ -63,7 +68,8 @@ const props = defineProps({
     }
 
     .project-img-container {
-        margin-left:0;
+        margin-left: 0;
     }
 
-}</style>
+}
+</style>

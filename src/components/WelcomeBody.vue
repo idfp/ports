@@ -4,7 +4,6 @@ import FireIcon from "./FireIcon.vue"
 import GithubIcon from "./icons/GithubIcon.vue"
 import QuestionIcon from "./icons/QuestionIcon.vue"
 import MailIcon from "./icons/MailIcon.vue"
-import CodeBlock from "./micro/CodeBlock.vue";
 const state = reactive({ message: "" });
 
 function typeEffect(message: string) {
@@ -19,23 +18,7 @@ function typeEffect(message: string) {
   }, 50);
 }
 typeEffect("Hi, Ashja Here. \nNeed a Help?");
-const code = `# Send short messages to me
-# type your message below`
-function sendMessage(message:string){
-  (async()=>{
-    const ip = (await (await fetch("https://api.my-ip.io/ip.json")).json()).ip
 
-    fetch("https://discord.com/api/webhooks/900574162219827331/eqG3eQ6HKAe3Sq1Q6pyqgu3LGUH_m45qi814l9KJuECVAaPs6CJy1VvQJUv7ORNbAqBz", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        content: `${ip}: ${message}`
-      })
-    })
-  })()
-}
 </script>
 
 <template>
@@ -45,26 +28,32 @@ function sendMessage(message:string){
       <div class="action-container">
         <a href="https://github.com/idfp" target="_blank" rel="noreferrer">
           <button class="action-button">
-            <GithubIcon :width="40" :height="40"/>
-            <span>Github<br/>Profile</span>
+            <GithubIcon :width="40" :height="40" />
+            <span>Github<br />Profile</span>
           </button>
         </a>
         <span class="action-divider"></span>
         <a href="#contact">
           <button class="action-button">
-            <MailIcon :width="40" :height="40"/>
-            <span>Contact<br/>Info</span>
+            <MailIcon :width="40" :height="40" />
+            <span>Contact<br />Info</span>
           </button>
         </a>
         <span class="action-divider"></span>
         <a href="#profile">
           <button class="action-button">
-            <QuestionIcon :width="40" :height="40"/>
-            <span>Self<br/>Profile</span>
+            <QuestionIcon :width="40" :height="40" />
+            <span>Self<br />Profile</span>
           </button>
         </a>
       </div>
-      <CodeBlock title="msg.sh" :code="code" interactive @execute="sendMessage"/>
+      <!-- <hr/> -->
+      <a href="https://github.com/idfp/port">
+        <button class="arctic-button">
+          View Source Code <svg style="margin-left:20px" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="30"><path fill="#fff" d="M80 896V256h800v640H80Zm60-60h680V400H140v436Zm350-68v-60h220v60H490Zm-190-4-42-42 103-104-104-104 43-42 146 146-146 146Z"/></svg>
+        </button>
+      </a>
+
     </section>
     <section class="image-section">
       <FireIcon />
@@ -73,53 +62,115 @@ function sendMessage(message:string){
 </template>
 
 <style>
+hr{
+  margin:0px 20px;
+}
 .image-section {
   margin-left: auto;
   margin-right: clamp(40px, 4vw, 200px);
-  margin-top:50px;
 }
+.arctic-button{
+  background-color: #00000000;
+  color:var(--arctic-text);
+  font-family: "Roboto Mono", monospace;
+  border: 0px;
+  font-size: 18px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  animation:switchBack 0.5s;
+  animation-fill-mode: both;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes switchColor {
+  from{
+    background-color: #00000000;
+    color:var(--arctic-text);
+    fill:#fff;
+  }
+  to{
+    background-color: var(--arctic-text);
+    color: black;
+    fill:black;
+  }
+}
+@keyframes switchBack {
+  from{
+    background-color: var(--arctic-text);
+    color: black;
+    fill:black;
+  }
+  to{
+    background-color: #00000000;
+    color:var(--arctic-text);
+    fill:#fff;
+  }
+}
+.arctic-button path{
+  animation:switchBack 0.5s;
+  animation-fill-mode: both;
+}
+.arctic-button:hover{
+  animation:switchColor 0.5s;
+  animation-fill-mode: both;
+}
+.arctic-button:hover path{
+  animation:switchColor 0.5s;
+  animation-fill-mode: both;
+}
+
 .welcome {
   background-color: var(--bg);
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 60px;
   height: clamp(400px, 70vh, 1200px);
-    justify-content: center;
+  justify-content: center;
 }
-.action-container{
+
+.action-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
 }
-.action-button{
-  border:none;
+
+.action-button {
+  border: none;
   display: flex;
   cursor: pointer;
   flex-direction: column;
   font-family: "Archivo", sans-serif;
   font-weight: 200;
   font-size: clamp(12px, 2vw, 18px);
-  color:var(--text);
+  color: var(--text);
   justify-content: center;
   align-items: center;
   background-color: #00000000;
 }
-.action-button:hover{
-  text-shadow:0px 0px 1px white;
+
+.action-button:hover {
+  text-shadow: 0px 0px 1px white;
 }
 
-.action-divider{
+.action-divider {
   border-right: 0.01px solid rgba(255, 255, 255, 0.5);
   margin-left: clamp(20px, 5vw, 40px);
   margin-right: clamp(20px, 5vw, 40px);
-  margin-top:10px;
-  margin-bottom:10px;
+  margin-top: 10px;
+  height: 100px;
+  margin-bottom: 10px;
 }
-.action-button > span{
-  margin-top:15px;
+
+.action-button>span {
+  margin-top: 15px;
 }
+
 .text-section {
   min-width: clamp(40px, 30vw, 200px);
   margin-left: 60px;
@@ -159,12 +210,16 @@ function sendMessage(message:string){
     margin-right: auto;
     margin-left: auto;
   }
+
   .welcome {
-    padding-top:200px;
+    padding-top: 200px;
     align-items: center;
     flex-wrap: wrap-reverse;
   }
-  .image-section{
+  .welcome-text{
+    text-align: center;
+  }
+  .image-section {
     margin-bottom: -50px;
   }
 }
@@ -177,4 +232,5 @@ function sendMessage(message:string){
   to {
     border-right-color: transparent;
   }
-}</style>
+}
+</style>

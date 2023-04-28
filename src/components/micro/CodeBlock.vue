@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 /**
  * Component Properties:
  * code: string 
@@ -34,6 +34,7 @@ const props = defineProps({
 const style = {
     maxHeight: (30 * props.line) + "px"
 }
+const codeblock = ref<HTMLDivElement | null>(null)
 const emit = defineEmits(['execute'])
 const state = reactive({ input:"" })
 let codelines:Array<codeline> = reactive([])
@@ -62,15 +63,21 @@ function executeCommand(event:Event){
         text: state.input
     })
     state.input = ""
+    setTimeout(()=>{
+        codeblock.value?.scrollBy({
+            top:100,
+            behavior: "smooth"
+        })
+    }, 100)
 }
 </script>
 <template>
     <section class="codeblock">
         <div class="codeblock-heading">{{ title }}</div>
-        <div class="codeblock-commands" :style="style">
+        <div ref="codeblock" class="codeblock-commands" :style="style">
             <pre v-for="codeline in codelines"><span v-html="codeline.text"></span></pre>
             <div v-if="interactive">
-                ><input autofocus class="codeblock-input" type="text" v-model="state.input" @keyup.enter="executeCommand"/>
+                ><input class="codeblock-input" type="text" v-model="state.input" @keyup.enter="executeCommand"/>
             </div>
         </div>
     </section>
@@ -85,6 +92,9 @@ function executeCommand(event:Event){
     padding-top:10px;
     background-color: var(--arctic-bg);
     color:var(--text);
+}
+a{
+    color:#ABB4C5;
 }
 .codeblock-heading{
     border-bottom: 1px solid var(--arctic-prim);

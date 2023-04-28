@@ -6,7 +6,7 @@ interface GithubRepo {
     name: string,
     fullName: string,
     description: string,
-    htmlUrl: string,
+    html_url: string,
     topics: Array<string>,
 }
 const images = new Map<number, string>([
@@ -26,7 +26,7 @@ fetch("https://api.github.com/users/idfp/repos")
     <h2 class="gp-header">Projects</h2>
     <div class="gp-container">
         <ProjectCard v-for="repo in repos" :key="repo.id" :name="repo.name" :description="repo.description" :topics="repo.topics"
-        :url="repo.htmlUrl" :image-url="images.get(repo.id)" />
+        :url="repo.html_url" :image-url="images.get(repo.id)" />
     </div>
 </template>
 
