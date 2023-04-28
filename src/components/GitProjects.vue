@@ -12,7 +12,7 @@ interface GithubRepo {
 const images = new Map<number, string>([
   [620241305, "/go-persist.webp"],
   [623772279, "/go-stealer.webp"],
-  [631220240, "/masquerade.gif"],
+  [631220240, "/masquerade.webm"],
   [633868940, "/ports.webp"],
 ]);
 console.log(images);
