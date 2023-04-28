@@ -1,52 +1,23 @@
-# Port
+# Portfolio 
+Yep, just the source code for my portfolio web, to flex my Vue capability that I just learned 3 days ago. Feel free to use anything here if anything ever seem useful for you (Which most likely won't).
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+## Installation
+Clone the repository, and install all dependencies
+```bash
+git clone http://github.com/idfp/ports
+cd ports
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+Then run development server with
+```
 npm run dev
 ```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
+Or build into compact HTML-JS-CSS files.
+```
 npm run build
 ```
+that's it, nothing fancy.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Then, let me thanks [@Gowee](https://github.com/Gowee/) for their beautiful [Nyancat SVG](https://github.com/Gowee/nyancat-svg) that I use as a decoration, with some slight modification. (Sorry for modfying it into grayscale :) )
+![](public/nyancat.svg)
 
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
