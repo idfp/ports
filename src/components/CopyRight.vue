@@ -1,17 +1,17 @@
 <template>
-<footer class="copyright">
+  <footer class="copyright">
     <h5>Copyright © 2023 Ashja R. Lesmana</h5>
-</footer>
+  </footer>
 </template>
 <style>
-footer{
-    margin-top:50px;
+footer {
+  margin-top: 50px;
 }
-h5{
-    font-family: "Roboto Mono", monospace;
-    font-size: 15px;
-    font-weight: 200;
-    color:var(--text);
-    text-align: center;
+h5 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--text);
+  text-align: center;
 }
 </style>

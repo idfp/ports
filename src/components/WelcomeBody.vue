@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import FireIcon from "./FireIcon.vue"
-import GithubIcon from "./icons/GithubIcon.vue"
-import QuestionIcon from "./icons/QuestionIcon.vue"
-import MailIcon from "./icons/MailIcon.vue"
+import FireIcon from "./FireIcon.vue";
+import GithubIcon from "./icons/GithubIcon.vue";
+import QuestionIcon from "./icons/QuestionIcon.vue";
+import MailIcon from "./icons/MailIcon.vue";
 const state = reactive({ message: "" });
 
 function typeEffect(message: string) {
@@ -18,7 +18,6 @@ function typeEffect(message: string) {
   }, 50);
 }
 typeEffect("Hi, Ashja Here. \nNeed a Help?");
-
 </script>
 
 <template>
@@ -50,10 +49,21 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
       <!-- <hr/> -->
       <a href="https://github.com/idfp/port">
         <button class="arctic-button">
-          View Source Code <svg style="margin-left:20px" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 96 960 960" width="30"><path fill="#fff" d="M80 896V256h800v640H80Zm60-60h680V400H140v436Zm350-68v-60h220v60H490Zm-190-4-42-42 103-104-104-104 43-42 146 146-146 146Z"/></svg>
+          View Source Code
+          <svg
+            style="margin-left: 20px"
+            xmlns="http://www.w3.org/2000/svg"
+            height="30"
+            viewBox="0 96 960 960"
+            width="30"
+          >
+            <path
+              fill="#fff"
+              d="M80 896V256h800v640H80Zm60-60h680V400H140v436Zm350-68v-60h220v60H490Zm-190-4-42-42 103-104-104-104 43-42 146 146-146 146Z"
+            />
+          </svg>
         </button>
       </a>
-
     </section>
     <section class="image-section">
       <FireIcon />
@@ -62,16 +72,16 @@ typeEffect("Hi, Ashja Here. \nNeed a Help?");
 </template>
 
 <style>
-hr{
-  margin:0px 20px;
+hr {
+  margin: 0px 20px;
 }
 .image-section {
   margin-left: auto;
   margin-right: clamp(40px, 4vw, 200px);
 }
-.arctic-button{
+.arctic-button {
   background-color: #00000000;
-  color:var(--arctic-text);
+  color: var(--arctic-text);
   font-family: "Roboto Mono", monospace;
   border: 0px;
   font-size: 18px;
@@ -79,45 +89,45 @@ hr{
   padding: 10px 20px;
   cursor: pointer;
   display: flex;
-  animation:switchBack 0.5s;
+  animation: switchBack 0.5s;
   animation-fill-mode: both;
   align-items: center;
   justify-content: center;
 }
 @keyframes switchColor {
-  from{
+  from {
     background-color: #00000000;
-    color:var(--arctic-text);
-    fill:#fff;
+    color: var(--arctic-text);
+    fill: #fff;
   }
-  to{
+  to {
     background-color: var(--arctic-text);
     color: black;
-    fill:black;
+    fill: black;
   }
 }
 @keyframes switchBack {
-  from{
+  from {
     background-color: var(--arctic-text);
     color: black;
-    fill:black;
+    fill: black;
   }
-  to{
+  to {
     background-color: #00000000;
-    color:var(--arctic-text);
-    fill:#fff;
+    color: var(--arctic-text);
+    fill: #fff;
   }
 }
-.arctic-button path{
-  animation:switchBack 0.5s;
+.arctic-button path {
+  animation: switchBack 0.5s;
   animation-fill-mode: both;
 }
-.arctic-button:hover{
-  animation:switchColor 0.5s;
+.arctic-button:hover {
+  animation: switchColor 0.5s;
   animation-fill-mode: both;
 }
-.arctic-button:hover path{
-  animation:switchColor 0.5s;
+.arctic-button:hover path {
+  animation: switchColor 0.5s;
   animation-fill-mode: both;
 }
 
@@ -167,7 +177,7 @@ hr{
   margin-bottom: 10px;
 }
 
-.action-button>span {
+.action-button > span {
   margin-top: 15px;
 }
 
@@ -204,7 +214,7 @@ hr{
   margin-right: auto;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .text-section {
     margin-left: clamp(0px, 1vw, 20px);
     margin-right: auto;
@@ -216,7 +226,7 @@ hr{
     align-items: center;
     flex-wrap: wrap-reverse;
   }
-  .welcome-text{
+  .welcome-text {
     text-align: center;
   }
   .image-section {
