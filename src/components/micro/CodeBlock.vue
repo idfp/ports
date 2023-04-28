@@ -76,9 +76,11 @@ function executeCommand(event: Event) {
     <div ref="codeblock" class="codeblock-commands" :style="style">
       <pre v-for="codeline in codelines"><span v-html="codeline.text"></span></pre>
       <div v-if="interactive">
+        <label for="cb-input" style="display:none">Command Input</label>
         ><input
           class="codeblock-input"
           type="text"
+          id="cb-input"
           v-model="state.input"
           @keyup.enter="executeCommand"
         />
