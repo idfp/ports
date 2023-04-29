@@ -3,8 +3,7 @@ import CodeBlock from "./micro/CodeBlock.vue";
 
 const code = `> contact list
 Email: <a href="mailto:bashed@tuta.io">bashed@tuta.io</a>
-Discord: bash#8147
-WhatsApp: +62 857-1025-1303
+Discord: bash#8147 (quick response)
 Github: <a href="https://github.com/idfp">IDFP</a>
 <br/>
 # Or just send me message here
