@@ -9,9 +9,9 @@ footer {
 }
 .copyright-text {
   font-family: "Roboto Mono", monospace;
-  font-size: 15px;
   font-weight: 200;
   color: var(--text);
   text-align: center;
+  font-size: clamp(12px, 2vw, 18px);
 }
 </style>
