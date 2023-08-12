@@ -20,7 +20,14 @@ let repos = ref<Array<GithubRepo>>([]);
 fetch("https://api.github.com/users/idfp/repos")
   .then((x) => x.json())
   .then((x) => {
-    repos.value = x;
+    const holder:Array<GithubRepo> = []
+    x.forEach( (y:GithubRepo) =>{
+      if(y.name === "corsa"){
+        return
+      }
+      holder.push(y)
+    })
+    repos.value = holder;
   });
 </script>
 <template>
