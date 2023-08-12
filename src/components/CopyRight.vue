@@ -6,6 +6,7 @@
 <style>
 footer {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 .copyright-text {
   font-family: "Roboto Mono", monospace;
