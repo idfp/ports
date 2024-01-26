@@ -26,15 +26,9 @@ Desktop Development:
         <Avatar />
       </div>
       <p class="profile-text">
-        よぉ! Welcome here, If you want to know something about me then... I'm a web developer, as
-        you can see. My main capability is React.Js development but well.. I built this web on Vue.
-        I never stick with 1 development set but React is my fav so far. Still in learning phase
-        cause I'm not an omnipotent dev, still unable to understand why people uses Angular.Js for
-        small projects ¯\_(ツ)_/¯.
-        <br /><br />Currently interested in Red-Team Penetration Testing cause it's black hat
-        hacking without the fear of FBI knocking on your door at 3AM. What's Red-Team pentest you
-        might ask, It's like asking your Martial Art coach to beat you up so you can understand your
-        own weaknesses.. or maybe because you have some emotional problem like me.
+        Welcome here, you are free to look or do anything here, as for now I will tell a bit about myself.
+        I'm a Full-Time Bug Bounty Hunter (or part-time if I got inhumane schedule on college) that have found several bugs on hackerone, done several ctf on intigriti despite not finding anything there, and planning to keep being a bug bounty hunter from now on.
+        Specialize in SQL injection and XSS (Cross-Site Scripting). I was a web developer though, with several certs on machine learning and desktop development.
       </p>
       <div class="profile-code">
         <CodeBlock :code="code" :line="10" title="Skills.sh" />
