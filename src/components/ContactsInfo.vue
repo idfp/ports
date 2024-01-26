@@ -7,7 +7,7 @@ Discord: @aka.ne (quick response)
 Github: <a href="https://github.com/idfp">IDFP</a>
 <br/>
 # Or just send me message here
-# Write something below and press enter, I will receive it :>
+# Write something below and press enter, I will receive it through webhook
 `;
 function execCommand(message: string) {
   (async () => {
