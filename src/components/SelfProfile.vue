@@ -5,15 +5,18 @@ import GitProjects from "./GitProjects.vue";
 
 const code = `> skill list
 Web Development:
-  HTML - CSS - JS
   Reactive Frameworks React.Js - Vue.Js
   Basic Express.Js & MongoDB
 
 Desktop Development:
   Electron.Js
-  Flutter Desktop
   Go - Nim - C++ For CLI Apps
-  Python - Node.Js For rapidly developing functional apps`;
+
+Penetration Testing:
+  Understanding and Experience of Basic Web Vulnerabilities
+  SQL Injection and XSS specialization
+  DeFi Audit (Solidity and JS)
+  `;
 </script>
 
 <template>
