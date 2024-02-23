@@ -34,7 +34,7 @@ function execCommand(message: string) {
       <h1 class="ci-header">0x01 - Contact Informations</h1>
     </header>
     <div class="ci-content">
-      <img class="ci-nyan" alt="Nyancat GIF" src="/nyancat.svg" />
+      <object class="ci-nyan" type="image/svg+xml" data="/nyancat.svg"></object>
       <div class="ci-code">
         <CodeBlock :code="code" :line="6" title="contacts.sh" interactive @execute="execCommand" />
       </div>
