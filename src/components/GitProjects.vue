@@ -22,7 +22,7 @@ fetch("https://api.github.com/users/idfp/repos")
   .then((x) => {
     const holder:Array<GithubRepo> = []
     x.forEach( (y:GithubRepo) =>{
-      if(y.name === "corsa" || y.name === "lnk-builder" || y.name === "jason" || y.name === "PDP-TA"){
+      if(y.name === "corsa" || y.name === "lnk-builder" || y.name === "jason" || y.name === "PDP-TA" || y.name === "upni"){
         return
       }
       holder.push(y)
