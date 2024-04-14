@@ -1,6 +1,6 @@
 <template>
   <footer class="copyright">
-    <h1 class="copyright-text">Copyright © 2023 Ashja R. Lesmana</h1>
+    <h1 class="copyright-text">Copyright © 2024 Ashja R. Lesmana</h1>
   </footer>
 </template>
 <style>
