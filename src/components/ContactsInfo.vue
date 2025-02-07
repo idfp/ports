@@ -3,7 +3,7 @@ import CodeBlock from "./micro/CodeBlock.vue";
 
 const code = `> contact list
 Email: <a href="mailto:mail@foul.one">mail@foul.one</a>
-Discord: @aka.ne (quick response)
+Discord: @nasi.kuning (quick response)
 Github: <a href="https://github.com/idfp">IDFP</a>
 <br/>
 # Or just send me message here
